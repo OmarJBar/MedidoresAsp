@@ -51,6 +51,24 @@ namespace StarCapWeb
         protected global::System.Web.UI.WebControls.Calendar fechaLectura;
 
         /// <summary>
+        /// Control horaTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox horaTxt;
+
+        /// <summary>
+        /// Control minutoTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox minutoTxt;
+
+        /// <summary>
         /// Control consumoLectura.
         /// </summary>
         /// <remarks>

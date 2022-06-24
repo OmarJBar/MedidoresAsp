@@ -13,7 +13,7 @@
                     <div class="form-group">
                         <label for="nombreTxt">Numero lectura: </label>
                         <asp:TextBox ID="NumeroLectura" CssClass="form-control" runat="server"></asp:TextBox> 
-                    </div>                    
+                    </div>
                     <div class="form-group">
                         <label for="fechaTxt">Medidor serie:</label>
                         <asp:DropDownList ID="medidorSerieDd" runat="server">
@@ -24,6 +24,13 @@
                         <label for="fechaTxt">Fecha:</label>
                         <asp:Calendar ID="fechaLectura" CssClass="form-control" runat="server"></asp:Calendar>
                     </div>
+                    <div class="form-group">
+                        <label for="horaTxt">Hora:</label>
+                        <asp:TextBox ID="horaTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label for="minutoTxt">Hora:</label>
+                        <asp:TextBox ID="minutoTxt" CssClass="form-control" runat="server"></asp:TextBox> 
+                    </div>
+
                     <div class="form-group">
                         <label for="consumoTxt">Consumo:</label>
                         <asp:TextBox ID="consumoLectura" CssClass="form-control" runat="server"></asp:TextBox> 

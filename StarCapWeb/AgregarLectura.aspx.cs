@@ -20,7 +20,7 @@ namespace StarCapWeb
                 List<Medidor> medidores = medidorDAL.ObtenerMedidores();
                 this.medidorSerieDd.DataSource = medidores;
                 this.medidorSerieDd.DataTextField = "medidorNro";
-                this.medidorSerieDd.DataValueField = "tipo";
+                this.medidorSerieDd.DataValueField = "medidorNro";
                 this.medidorSerieDd.DataBind();
             }
         }
@@ -28,11 +28,16 @@ namespace StarCapWeb
         protected void agregarBtn_Click(object sender, EventArgs e)
         {
             int idlectura = Convert.ToInt32(this.NumeroLectura.Text.Trim());
-
             string fechatxt = this.fechaLectura.SelectedDate.ToShortDateString();
-            double consumo = Convert.ToDouble(this.consumoLectura.Text.Trim());
-
+            double consumo = Convert.ToDouble(this.consumoLectura.Text.Trim());            
             int medidorValor = Convert.ToInt32(this.medidorSerieDd.SelectedValue);
+            string hora()
+            {
+                string hour = this.horaTxt.Text.Trim();
+                string min = this.minutoTxt.Text.Trim();
+                string text =(hour + ":" + min);
+                return text;
+            }
 
             List<Medidor> medidores = medidorDAL.ObtenerMedidores();
             Medidor medidor = medidores.Find(m=>m.MedidorNro==medidorValor);
@@ -41,6 +46,7 @@ namespace StarCapWeb
             {
                 IdLectura = idlectura,
                 Medidor = medidor,
+                Hora = hora(),
                 Fecha = Convert.ToDateTime(fechatxt),
                 Consumo = consumo
             };

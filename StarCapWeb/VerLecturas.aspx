@@ -7,6 +7,9 @@
                     <h3>Ver Medidores</h3>
                 </div>
                 <div class="card-body">
+                    <asp:DropDownList ID="MedidoresDdl" runat="server">
+
+                    </asp:DropDownList>
 
                     <asp:GridView CssClass="table table-hover table-bordered mt-5" 
                         OnRowCommand="grillaLecturas_RowCommand"
@@ -15,8 +18,9 @@
                        <Columns>
                            <asp:BoundField DataField="IdLectura" HeaderText="Id" />                           
                            <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
+                           <asp:BoundField DataField="Hora" HeaderText="Hora" />
                            <asp:BoundField DataField="Consumo" HeaderText="Consumo" />         
-                           <asp:BoundField DataField="Medidor.medidorNro" HeaderText="Id medidor" />
+                           <asp:BoundField DataField="Medidor.MedidorNro" HeaderText="Id medidor" />
                        </Columns>
                     </asp:GridView>
                 </div>

@@ -24,7 +24,13 @@ namespace StarCapWeb
             List<Lectura> lectura = lecturaDAL.ObtenerMedidores();
             this.grillaLecturas.DataSource = lectura;
             this.grillaLecturas.DataBind();
+            List<Lectura> lecturaMedidor = lecturaDAL.ObtenerMedidores();
+            this.MedidoresDdl.DataSource = lecturaMedidor;
+            this.MedidoresDdl.DataTextField = "Medidor";
+            this.MedidoresDdl.DataValueField = "Medidor.MedidorNro";
+            this.MedidoresDdl.DataBind();
         }
+
         private void cargaGrilla(List<Lectura> filtrada)
         {
             List<Lectura> lectura = lecturaDAL.ObtenerMedidores();
