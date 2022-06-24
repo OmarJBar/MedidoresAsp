@@ -17,9 +17,8 @@
                     <div class="form-group">
                         <label for="fechaTxt">Tipo de medidor</label>
                         <asp:RadioButtonList runat="server" ID="tipoMed">
-                            <asp:ListItem Selected="True" Value="1" Text="Silver"></asp:ListItem>
-                            <asp:ListItem Value="2" Text="Gold"></asp:ListItem>
-                            <asp:ListItem Value="3" Text="Platinum"></asp:ListItem>
+                            <asp:ListItem Selected="True" Value="1" Text="Luz"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Agua"></asp:ListItem>
                         </asp:RadioButtonList>
                     </div>
                     <div class="form-group">

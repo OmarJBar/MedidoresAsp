@@ -18,13 +18,10 @@ namespace UtilsMedidor.DTO
                 switch (Tipo)
                 {
                     case 1:
-                        tipoTxt = "Silver";
+                        tipoTxt = "Luz";
                         break;
                     case 2:
-                        tipoTxt = "Gold";
-                        break;
-                    case 3:
-                        tipoTxt = "Platinum";
+                        tipoTxt = "Agua";
                         break;
                 }
                 return tipoTxt;

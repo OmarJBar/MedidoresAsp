@@ -7,7 +7,13 @@
                     <h3>Ver Medidores</h3>
                 </div>
                 <div class="card-body">
-                     
+                     <div class="form-group">
+                        <label for="filtrar">Filtrar</label>
+                        <asp:DropDownList ID="DropDownList1" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" runat="server">
+                            <asp:ListItem Value="1" Text="Luz"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Agua"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
                     <asp:GridView CssClass="table table-hover table-bordered mt-5" runat="server" ID="grillaMedidores">
 
                     </asp:GridView>

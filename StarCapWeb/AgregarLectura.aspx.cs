@@ -28,7 +28,7 @@ namespace StarCapWeb
         protected void agregarBtn_Click(object sender, EventArgs e)
         {
             int idlectura = Convert.ToInt32(this.NumeroLectura.Text.Trim());
-            string fechatxt = this.fechaLectura.SelectedDate.ToShortDateString();
+            string fechatxt = this.fechaLectura.SelectedDate.Date.ToString("d");
             double consumo = Convert.ToDouble(this.consumoLectura.Text.Trim());            
             int medidorValor = Convert.ToInt32(this.medidorSerieDd.SelectedValue);
             string hora()

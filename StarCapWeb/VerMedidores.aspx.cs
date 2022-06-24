@@ -21,5 +21,10 @@ namespace StarCapWeb
                 this.grillaMedidores.DataBind();
             }
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -6,11 +6,9 @@
                 <div class="card-header bg-danger text-white">
                     <h3>Ver Medidores</h3>
                 </div>
+
                 <div class="card-body">
-                    <asp:DropDownList ID="MedidoresDdl" runat="server">
-
-                    </asp:DropDownList>
-
+                                    
                     <asp:GridView CssClass="table table-hover table-bordered mt-5" 
                         OnRowCommand="grillaLecturas_RowCommand"
                         EmptyDataText="No hay Lecturas" ShowHeader="true"
