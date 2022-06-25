@@ -13,6 +13,6 @@ namespace UtilsMedidor.DAL
         List<Medidor> ObtenerMedidores();
         void Eliminar(int medidorNro);
 
-        List<Medidor> FiltrarMedidores(int medidor);
+        List<Medidor> FiltrarMedidores(int tipo);
     }
 }

@@ -22,9 +22,9 @@ namespace UtilsMedidor.DAL
             medidores.Remove(eliminando);
         }
 
-        public List<Medidor> FiltrarMedidores(int medidor)
+        public List<Medidor> FiltrarMedidores(int tipo)
         {
-            return medidores.FindAll(me=>me.MedidorNro==medidor);
+            return medidores.FindAll(me=>me.Tipo==tipo);
         }
 
         public List<Medidor> ObtenerMedidores()

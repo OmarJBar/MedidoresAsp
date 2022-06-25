@@ -21,10 +21,27 @@ namespace StarCapWeb
                 this.grillaMedidores.DataBind();
             }
         }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cargaGrilla()
         {
+            List<Medidor> medidores = medidorDAL.ObtenerMedidores();
+            this.grillaMedidores.DataSource = medidores;
+            this.grillaMedidores.DataBind();
+        }
+        private void cargaGrilla(List<Medidor> filtrada)
+        {
+            List<Medidor> medidores = medidorDAL.ObtenerMedidores();
+            this.grillaMedidores.DataSource = filtrada;
+            this.grillaMedidores.DataBind();
+        }
 
+        protected void tipofil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tipofil.SelectedItem != null)
+            {
+                int tipo = Convert.ToInt32(this.tipofil.SelectedItem.Value);
+                List<Medidor> filtrotipo = medidorDAL.FiltrarMedidores(tipo);
+                cargaGrilla(filtrotipo);
+            }
         }
     }
 }
