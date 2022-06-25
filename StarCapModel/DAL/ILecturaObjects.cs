@@ -11,9 +11,18 @@ namespace UtilsMedidor.DAL
     {
         private static List<Lectura> lecturas = new List<Lectura>();
 
-        public void AgregarLectura(Lectura lectura)
+        public bool AgregarLectura(Lectura lectura)
         {
-            lecturas.Add(lectura);
+            try
+            {
+                lecturas.Add(lectura);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
 
         public void Eliminar(int lectura)

@@ -24,22 +24,31 @@ namespace StarCapWeb
         protected global::System.Web.UI.WebControls.Label mensajeLbl;
 
         /// <summary>
-        /// Control RequiredFieldValidator5.
+        /// Control mensajeLbler.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        protected global::System.Web.UI.WebControls.Label mensajeLbler;
 
         /// <summary>
-        /// Control RangeValidator5.
+        /// Control numeroRfv.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator5;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator numeroRfv;
+
+        /// <summary>
+        /// Control numeroRv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator numeroRv;
 
         /// <summary>
         /// Control NumeroLectura.
@@ -58,15 +67,6 @@ namespace StarCapWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList medidorSerieDd;
-
-        /// <summary>
-        /// Control RequiredFieldValidator4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
         /// Control fechaLectura.

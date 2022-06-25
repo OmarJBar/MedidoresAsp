@@ -23,36 +23,46 @@ namespace StarCapWeb
                 this.medidorSerieDd.DataValueField = "medidorNro";
                 this.medidorSerieDd.DataBind();
             }
+            
         }
 
         protected void agregarBtn_Click(object sender, EventArgs e)
         {
-            int idlectura = Convert.ToInt32(this.NumeroLectura.Text.Trim());
-            string fechatxt = this.fechaLectura.SelectedDate.Date.ToString("d");
-            double consumo = Convert.ToDouble(this.consumoLectura.Text.Trim());            
-            int medidorValor = Convert.ToInt32(this.medidorSerieDd.SelectedValue);
-            string hora()
-            {
-                string hour = this.horaTxt.Text.Trim();
-                string min = this.minutoTxt.Text.Trim();
-                string text =(hour + ":" + min);
-                return text;
+            try {
+                int idlectura = Convert.ToInt32(this.NumeroLectura.Text.Trim());
+                string fechatxt = this.fechaLectura.SelectedDate.Date.ToString("d");
+                double consumo = Convert.ToDouble(this.consumoLectura.Text.Trim());
+                int medidorValor = Convert.ToInt32(this.medidorSerieDd.SelectedValue);
+                string hora()
+                {
+                    string hour = this.horaTxt.Text.Trim();
+                    string min = this.minutoTxt.Text.Trim();
+                    string text = (hour + ":" + min);
+                    return text;
+                }
+
+                List<Medidor> medidores = medidorDAL.ObtenerMedidores();
+                Medidor medidor = medidores.Find(m => m.MedidorNro == medidorValor);
+
+                Lectura lectura = new Lectura()
+                {
+                    IdLectura = idlectura,
+                    Medidor = medidor,
+                    Hora = hora(),
+                    Fecha = Convert.ToDateTime(fechatxt),
+                    Consumo = consumo
+                };
+                bool v = lecturaDAL.AgregarLectura(lectura);
+                if (v)
+                {
+                    this.mensajeLbl.Text = "Lectura Ingresada";
+                    Response.Redirect("VerLecturas.aspx");
+                }
             }
-
-            List<Medidor> medidores = medidorDAL.ObtenerMedidores();
-            Medidor medidor = medidores.Find(m=>m.MedidorNro==medidorValor);
-
-            Lectura lectura = new Lectura()
+            catch (Exception er)
             {
-                IdLectura = idlectura,
-                Medidor = medidor,
-                Hora = hora(),
-                Fecha = Convert.ToDateTime(fechatxt),
-                Consumo = consumo
-            };
-            lecturaDAL.AgregarLectura(lectura);
-            this.mensajeLbl.Text = "Lectura Ingresada";
-            Response.Redirect("VerLecturas.aspx");
+                this.mensajeLbler.Text = "Error al ingresar: "+er.Message;
+            }
         }
     }
 }

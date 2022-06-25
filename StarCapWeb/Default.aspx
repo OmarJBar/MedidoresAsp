@@ -11,7 +11,11 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="nombreTxt">Numero medidor: </label>
+                        <label for="nombreTxt">Numero medidor: 
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NumeroMed" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="NumeroMed" Display="Dynamic" ErrorMessage="Fuera de rango" ForeColor="Red" MaximumValue="1000" MinimumValue="1" SetFocusOnError="True" Type="Integer" ValidationGroup="vg"></asp:RangeValidator>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="NumeroMed" Display="Dynamic" ErrorMessage="Solo enteros" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate" ValidationGroup="vg"></asp:CustomValidator>
+                        </label>
                         <asp:TextBox ID="NumeroMed" CssClass="form-control" runat="server"></asp:TextBox> 
                     </div>                    
                     <div class="form-group">

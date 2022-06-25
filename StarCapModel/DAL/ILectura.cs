@@ -9,7 +9,7 @@ namespace UtilsMedidor.DAL
 {
     public interface ILectura
     {
-        void AgregarLectura(Lectura lectura);
+        bool AgregarLectura(Lectura lectura);
         List<Lectura> ObtenerMedidores();
         void Eliminar(int lectura);
 
